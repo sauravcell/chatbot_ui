@@ -7,7 +7,14 @@ go.addEventListener('click', () => {
 })
 
 document.addEventListener("DOMContentLoaded", function () {
+  fetch("https://chatbot-jcnp.onrender.com").then((res)=>{
+     return res.json(); 
+  }).then((data)=>{
+     console.warn(data); 
+  })
 
+
+  
   const supportButton = document.getElementById("supportButton");
   const chatPopup = document.getElementById("chatPopup");
   const closeModal = document.getElementsByClassName("close")[0];
