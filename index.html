@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Chat Bot</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,40 +15,48 @@
     ></script> -->
 </head>
 
-<body>
-  <div class="container form-container" id="myForm">
-    <h2 style="color: green;" class="welcome">Wecome to SGDMS. Let's get you started!</h2>
-    <button class="btn btn-success go">Let's go </button>
-  </div>
-
-  <!-- Support Button in the bottom-right corner -->
-  <button id="supportButton" class="support-button">Support</button>
-
-  <!-- Chat Popup Window Structure -->
-  <div id="chatPopup" class="chat-popup">
-    <div class="chat-header">
-      <span>Customer Support</span>
-      <span class="close">&times;</span>
+<body id="body">
+  <div id="mainContainer">
+    <!-- sgdms dashboard window -->
+    <div class="container form-container" id="myForm">
+      <h2 style="color: green;" class="welcome">Wecome to SGDMS. Let's get you started!</h2>
+      <button class="btn btn-success go">Let's go </button>
     </div>
-    <div class="chat-body">
-      <!-- Welcome message and main option buttons -->
 
-      <div id="welcomeMessage">
-        <p>Welcome to SGDMS customer care service</p>
-        <button id="technicalSupportButton">Need technical support</button>
-        <button id="guideButton">Explore our guide to SGDMS</button>
+    <!-- Support Button in the bottom-right corner -->
+    <button id="supportButton" class="support-button">Support</button>
+
+    <!-- Chat Popup Window Structure -->
+    <div id="chatPopup" class="chat-popup">
+      <!-- chatbox-header -->
+   
+        <div class="chat-header col-12">
+          <span><img class="botImg" src="./assets/chatbot.png" alt="chatbot">SGDMS Assistant</span>
+          <span class="close">&times;</span>
+          <p class="online">Online</p>
+        </div>
+        <div id="welcomeheader" class="col-12">
+          <button id="technicalSupportButton" class="btn ">Technical support</button>
+          <button id="guideButton">SGDMS Guide</button>
+        </div>
+
+      <div class="bodyContainer">
+
+        <div class="chat-body">
+          <!-- <img src="./assets/chat-bg.JPG" alt="" class="chat-bg"> -->
+          <div class="scroll"></div>
+       </div>
+      
+        <div class="footer col-12">
+          <p class="assistance">&nbsp;&nbsp;Contact us:</p>
+          &nbsp;&nbsp;+91 4305940385 | <a href="mailto:example@gmail.com">example@gmail.com</a>
+
+        </div>
       </div>
-
-      <!-- Question buttons that load after selecting 'Need technical support' -->
-      <div id="questionButtons" style="display: none;"></div>
-      <!-- Display area for the answer after selecting a question -->
-      <div id="answerDisplay"></div>
     </div>
-  </div>
 
 
-
-  <script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
