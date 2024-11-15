@@ -58,14 +58,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function loadQuestions(category) {
     console.log(category)
-    fetch(`https://chatbot-jcnp.onreder.com/sgdms/tutorialQuestion`, {
-      mode: 'no-cors', // explicitly tell fetch to use CORS
-      headers: {
-        'Content-Type': 'application/json',
-      }, 
-    })
+    fetch(`https://chatbot-jcnp.onreder.com/sgdms/tutorialQuestion`)
       .then((response) => response.json())
       .then((data) => {
+        console.log(`from loadQuestions: ${data}`)
         // Create container for questions
         var queryContainer = document.createElement('div');
         var query = document.createElement('p')
