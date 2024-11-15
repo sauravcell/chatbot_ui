@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function loadQuestions(category) {
     console.log(category)
-    fetch(`https://chatbot-jcnp.onrender.com/sgdms/tutorial`)
+    fetch(`https://chatbot-jcnp.onrender.com/sgdms/${category}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(`from loadQuestions: ${data}`)
