@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function loadQuestions(category) {
     console.log(category)
     fetch(`https://chatbot-jcnp.onreder.com/sgdms/tutorialQuestion`, {
-      mode: 'cors', // explicitly tell fetch to use CORS
+      mode: 'no-cors', // explicitly tell fetch to use CORS
       headers: {
         'Content-Type': 'application/json',
       }, 
