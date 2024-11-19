@@ -25,15 +25,12 @@ li {
 
 .support-button {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: -10px;
+  right: -10px;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
   z-index: 1000;
+
 }
 
 .chat-popup {
@@ -43,29 +40,18 @@ li {
   bottom: 80px;
   right: 20px;
   width: 400px;
-  height: 80vh;
+  /* height: 80vh;   */
+  max-height: -100px;
   /* background-color: rgb(94, 59, 146);
    */
   background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
   /* border: 1px solid #dddddd; */
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 100;
   /* position: relative; */
   display: flex;
   flex-direction: column;
 }
-
-/* .bodyContainer {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 60vh auto;
-
-} */
-
-/* .bodyContainer .chat-body{
-  flex:1;
-} */
 
 
 /* direct child of chat-popup */
@@ -75,16 +61,14 @@ li {
   scrollbar-width: 10px !important;
   scroll-behavior: smooth;
   flex-direction: column;
-  position: relative;
+  /* position: relative; */
   overflow-y: hidden;
 
-  height: 60vh !important;
-  /* Take remaining height */
-  flex: 1;
+  height: 50vh !important;
   overflow-y: auto;
   /* scrollbar-width: none; Changed from 5px to none to hide scrollbar */
   scroll-behavior: smooth;
-  scrollbar-color: rgb(213, 213, 213) rgba(1, 88, 73, 0.305);
+  scrollbar-color: rgba(233, 183, 3, 0.843) rgba(1, 88, 73, 0.305);
   scrollbar-width: thin;
   /* Hide scrollbar for Chrome/Safari/Opera
      &::-webkit-scrollbar {
@@ -103,8 +87,10 @@ li {
 
 .close {
   float: right;
-  font-size: 2rem;
+  padding-right: 2%;
+  font-size: 1.5rem;
   cursor: pointer;
+  font-family: cursive;
 }
 
 .online {
@@ -122,20 +108,29 @@ li {
 #technicalSupportButton,
 #guideButton {
   padding-block: 10;
-  height: 2.3rem;
+  height: 2rem;
   padding: 1%;
   border-radius: 10px !important;
-  width: 40% !important;
+  width: 20% !important;
   margin-block: 5% !important;
-  margin-inline: 5%;
+  /* margin-inline: 5%; */
   text-align: center !important;
   font-size: 1rem;
-  background-color: beige !important;
+  /* background-color: beige !important; */
   transition: all 300ms ease-in-out;
   color: rgb(17, 16, 16);
   border: none;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  font-size: 1rem;
 }
+
+#technicalSupportButton{
+  margin-left: 13% !important;
+}
+#guideButton{
+  margin-right: 10% !important;
+}
+
 
 #technicalSupportButton:hover {
   transform: scale(1.07);
@@ -143,28 +138,65 @@ li {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+#technicalSupportButton:hover .fa-gear {
+  transform-origin: center !important;
+  transform: rotate(360deg) scale(1.1);
+}
+
+
+.fa-book-open {
+  display: none;
+}
+
+
+
 #guideButton:hover {
   transform: scale(1.07);
   width: 40% !important;
+
   /* background-color: rgba(27, 1, 24, 0.679) !important; */
 }
 
+.fa-book-open{
+  display: none;
+}
+.fa-book{
+  display: block !important;
+}
+
+
 .botImg {
-  height: 50px;
-  width: 50px;
+  height: 120px;
+  width: 150px;
   /* border: 1px solid white; */
+
   padding: 5px;
   border-radius: 50%;
-  margin-top: 2%;
+  margin-left: -15%;
+  margin-top: -5%;
 }
 
 .chat-header {
+  /* display: flex; */
   background-color: #024a39 !important;
   color: white;
   padding: 10px;
-  height: 100px;
+  height: 120px;
   border-radius: 15px;
 
+}
+
+.assistant {
+  display: inline;
+  font-size: 1.5rem;
+  margin-left: -10%;
+  font-family: verdana;
+  margin-top: -10% !important;
+}
+
+.online {
+  display: block;
+  text-align: center;
 }
 
 #welcomeMessage p,
@@ -222,7 +254,7 @@ li {
    */
   background-color: #035441;
   padding: 1px;
-  height: 100px;
+  height: 90px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -267,8 +299,6 @@ li {
 }
 
 .footer {
-  position: relative;
-  z-index: 1000;
   height: 70px;
   background-color: #035441;
   border-top-right-radius: 80px;
@@ -281,10 +311,19 @@ li {
     rgba(0, 0, 0, 0.59) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px,
     rgba(0, 0, 0, 0.651) 0px 32px 16px;
-  margin-top: -14.3% !important;
+  margin-top: -13.9% !important;
   border-bottom-left-radius: 20px;
   font-size: 0.94rem;
+  align-self: flex-end;
+  position: relative;
+  z-index: 10;
 }
+
+.fa {
+  /* padding-right: 5%; */
+  transition: all .5s ease-in-out;
+}
+
 
 a {
   color: white !important;
@@ -309,7 +348,8 @@ a {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.671) 0px 3px 7px -3px;
 
 }
-.liButtons:hover{
+
+.liButtons:hover {
   background-color: rgba(2, 127, 54, 0.558);
   color: white;
 }
@@ -339,9 +379,10 @@ a {
   float: right !important;
 }
 
-::selection{
+::selection {
   color: #035441;
 }
+
 .answerDisplayClass p {
   background-color: #d7d5d7c2;
   color: #3f3e3e !important;
@@ -356,6 +397,23 @@ a {
 }
 
 
+.fade {
+  animation: fade 0.3s ease-out forwards;
+}
+
+
+/* key frame animation */
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /* key frame animation */
 
 @keyframes fadeIn {
@@ -369,5 +427,3 @@ a {
     transform: translateX(0);
   }
 }
-
-
